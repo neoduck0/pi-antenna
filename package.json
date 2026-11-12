@@ -1,0 +1,60 @@
+{
+  "name": "pi-antenna",
+  "version": "0.1.0",
+  "type": "module",
+  "description": "Pi extension giving the agent web access: websearch (Exa, Brave) and webfetch",
+  "license": "MIT",
+  "author": "Amr (https://github.com/neoduck0)",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/neoduck0/pi-antenna.git"
+  },
+  "homepage": "https://github.com/neoduck0/pi-antenna#readme",
+  "bugs": {
+    "url": "https://github.com/neoduck0/pi-antenna/issues"
+  },
+  "keywords": [
+    "pi-package",
+    "pi",
+    "pi-extension",
+    "websearch",
+    "webfetch",
+    "exa",
+    "brave"
+  ],
+  "files": [
+    "src",
+    "README.md",
+    "LICENSE",
+    "CHANGELOG.md"
+  ],
+  "engines": {
+    "node": ">=22.19.0"
+  },
+  "scripts": {
+    "check": "tsc -p .",
+    "prepublishOnly": "npm run check"
+  },
+  "pi": {
+    "extensions": [
+      "./src/index.ts"
+    ]
+  },
+  "dependencies": {
+    "htmlparser2": "^12.0.0"
+  },
+  "peerDependencies": {
+    "@earendil-works/pi-ai": "*",
+    "@earendil-works/pi-coding-agent": "*",
+    "@earendil-works/pi-tui": "*",
+    "typebox": "*"
+  },
+  "devDependencies": {
+    "@earendil-works/pi-ai": "^1.5.2",
+    "@earendil-works/pi-coding-agent": "^1.5.2",
+    "@earendil-works/pi-tui": "^1.5.2",
+    "@types/node": "^24.0.0",
+    "typebox": "^1.3.27",
+    "typescript": "^5.9.0"
+  }
+}
